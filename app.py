@@ -55,7 +55,7 @@ def add_user():
 def upload():
     file = request.form.get('inputfile')
 
-    cursor.execute("""INSERT INTO `photo` (`file`) VALUES
+    cursor.execute("""INSERT INTO `file` (`file`) VALUES
     ('{}')""".format(file))
     conn.commit()
     return "<h3>File Upload Done<h3>"
